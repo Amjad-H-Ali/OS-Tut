@@ -3,6 +3,8 @@ GPPPARAMS = -m32
 
 ASPARAMS = --32
 
+LDPARAMS = -melf_i386
+
 objects = loader.o kernel.o
 
 # To create a .output file from a .cpp file
@@ -16,3 +18,7 @@ objects = loader.o kernel.o
 # To create .bin file. Will depend on linker.ld file and object files.
 mykernel.bin: linker.ld $(objects)
 	ld $(LDPARAMS) -T $< -o $@ $(objects)
+
+# Install mykernel.bin
+install: mykernel.bin
+	sudo cp $< /boot/mykernal.bin
