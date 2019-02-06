@@ -18,7 +18,7 @@
 
 # Point esp register to kernel_stack
 loader:
-	mov $kernel_stack, %
+	mov $kernel_stack, %esp
 	# Boot loader stores pointer to multi boot structure in ax register.
 	push %eax
 	# Bootloader copies Magic number to bx register
