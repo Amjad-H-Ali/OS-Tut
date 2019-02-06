@@ -13,8 +13,7 @@
 .section .text
 # Telling assembler there is going to be a function called kernelMain.
 .extern kernelMain
-
-.global loader
+.global loader 
 
 # Point esp register to kernel_stack
 loader:
