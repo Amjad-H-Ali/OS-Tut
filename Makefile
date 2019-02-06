@@ -1,5 +1,5 @@
-# 32 Bit
-GPPPARAMS = -m32
+# 32 Bit                             # Tell compiler don't assume there's Dynamic memory management, Standard Lib, Exception Handlind or ETC.
+GPPPARAMS = -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
 
 ASPARAMS = --32
 
