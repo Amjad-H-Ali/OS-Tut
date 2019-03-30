@@ -33,5 +33,6 @@ _stop:
 
 .section .bss
 # Space behind kernel_stack so as to not override anything in stack already.
-.space 2*1024*1024; # 2 MB
+.space 2*1024*1024; # 2 MB 
+
 kernel_stack:	
